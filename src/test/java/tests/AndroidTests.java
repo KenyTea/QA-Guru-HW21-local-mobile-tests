@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Test;
 
@@ -15,5 +16,12 @@ public class AndroidTests extends TestBase {
         $(MobileBy.AccessibilityId("Search Wikipedia")).click();
         $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
         $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));
+    }
+
+    @Test
+    void someTest(){
+        $(MobileBy.AccessibilityId("")).click();
+        $(MobileBy.id("")).sendKeys("");
+        $(byClassName("")).shouldHave(Condition.text(""));
     }
 }
