@@ -1,4 +1,4 @@
-# Automation api and ui testing with [Rest-assured](https://rest-assured.io/)
+# Automation mobile testing with help [browserstack](https://www.browserstack.com/)
 
 
 ___
@@ -15,6 +15,7 @@ ___
 <img width="5%" title="Selenide" src="forReadme/Selenide_icon.svg">
 <img width="5%" title="Github" src="forReadme/Github_icon.png">
 <img width="5%" title="Rest Assured" src="forReadme/Rest Assured.png">
+<img width="5%" title="Allure_Report" src="forReadme/Allure_Report_icon.svg">
 </code>
 </p>
 
@@ -30,20 +31,32 @@ ___
 
 ## Description:
 
-this project was created for learning to work with Rest Assured and UI tests
+This project was created as an example of developing mobile autotests using browserstack
 
 ___
 
+## Еechnical task
+
+- Зарегистрировать аккаунт в browserstack
+- Запустить автотест с примером из browserstack локально
+- Разработать еще один автотест, используя инспектор browserstack (простейший тест)
+- Добавить аллюровские степы
+- Вынести данные (логин, пароль, урл браузерстека и т.д.) в .properties с owner
+- Сделать сборку в дженкинсе
+- Добавить проект в TestOps
+
+---
+
 ## Materials:
 
-[library for assertThat checks](https://assertj.github.io/doc/)
+[Jenkins](https://jenkins.autotests.cloud/job/QA-Guru9-HW20-mobile-tests/)
 
-[Documentation Rest-assured](https://github.com/rest-assured/rest-assured/wiki/usage)
+[browserstack](https://www.browserstack.com/)
 
-[Selenide + REST Assured example](https://github.com/autotests-cloud/allure-qaguru)
+[Learning example](https://github.com/qa-guru/wikipedia-mobile-tests)
 
-[Parse json](https://jsonlint.com/)
+[Ran simple app](https://app-live.browserstack.com/)
 
-[Examples for training](https://reqres.in/)
+[Presentation](https://docs.google.com/presentation/d/1jgn_L3Sb5mPAVHO1xJGtkBc6g6XpuCfBYcYaBXj4LTs/edit#slide=id.g7807a32a71_0_8)
 
-[Learning example](https://github.com/qa-guru/simple-rest-assured/blob/demowebshop/src/test/java/DemowebshopTests.java)
+[For example iOS on Swift](https://swiftwithmajid.com/2021/03/18/ui-testing-in-swift-with-xctest-framework/)
