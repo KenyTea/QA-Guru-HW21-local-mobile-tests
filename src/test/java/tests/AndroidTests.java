@@ -15,6 +15,8 @@ import static io.qameta.allure.Allure.step;
 
 public class AndroidTests extends TestBase {
 
+    //https://jenkins.autotests.cloud/job/QA-Guru9-HW20-mobile-tests/
+
     @Test
     void searchTest() {
         step("Open wikipedia", () ->
