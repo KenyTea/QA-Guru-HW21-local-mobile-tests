@@ -1,7 +1,7 @@
 package drivers;
 
-import browserstack.App;
 import com.codeborne.selenide.WebDriverProvider;
+import helpers.App;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -23,9 +23,9 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     @Override
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
         // Set your access credentials
-        //desiredCapabilities.setCapability("browserstack.user", "alex_qOEZV9");
+        //desiredCapabilities.setCapability("browserstack.user", "qaguru_B5xciN");
         desiredCapabilities.setCapability("browserstack.user", App.config.userLogin());
-        //desiredCapabilities.setCapability("browserstack.key", "CNqNAsq7sNz8EZT1Zxde");
+        //desiredCapabilities.setCapability("browserstack.key", "TzFxj7ss7siMKTxUURLy");
         desiredCapabilities.setCapability("browserstack.key", App.config.userKey());
 
         // Set URL of the application under test
