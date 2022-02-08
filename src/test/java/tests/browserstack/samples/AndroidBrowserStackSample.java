@@ -16,6 +16,8 @@ import java.util.List;
 @Tag("Sample")
 public class AndroidBrowserStackSample {
 
+    //gradle clean test -Dtag=Sample
+
     @Test
     void searchTest() throws MalformedURLException, InterruptedException {
 

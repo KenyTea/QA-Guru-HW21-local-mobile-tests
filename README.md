@@ -1,4 +1,4 @@
-# Automation mobile testing with [android studio](https://developer.android.com/studio)
+# Automation mobile testing with [Appium](https://appium.io/)
 
 
 ___
@@ -16,6 +16,7 @@ ___
 <img width="5%" title="Github" src="forReadme/Github_icon.png">
 <img width="5%" title="Rest Assured" src="forReadme/Rest Assured.png">
 <img width="5%" title="Allure_Report" src="forReadme/Allure_Report_icon.svg">
+<img width="5%" title="Appium" src="forReadme/appium_icon.svg">
 </code>
 </p>
 
@@ -25,17 +26,21 @@ ___
 ## Run tests from terminal locally:
 
 ```bash
-gradle clean test 
+gradle clean test -Dtag=browserstack
+
+gradle clean test -Dtag=local_android
+
+gradle clean test -Dtag=Sample
 ```
 ___
 
 ## Description:
 
-This project was created as an example of developing mobile autotests using android studio in local machine
+This project was created as an example of developing mobile autotests using the Appium server.
 
 ___
 
-## Еechnical task
+## Technical task
 
 1. Установить android studio https://developer.android.com/studio
 
@@ -87,7 +92,7 @@ export PATH=”${PATH}:/$ANDROID_HOME/tools:/$ANDROID_HOME/tools/bin:/$ANDROID_H
 
 ## Materials:
 
-[Jenkins](https://jenkins.autotests.cloud/job/QA-Guru9-HW20-mobile-tests/)
+[Appium](https://appium.io/)
 
 [android studio](https://developer.android.com/studio)
 
