@@ -16,7 +16,7 @@ ___
 <img width="5%" title="Github" src="forReadme/Github_icon.png">
 <img width="5%" title="Rest Assured" src="forReadme/Rest Assured.png">
 <img width="5%" title="Allure_Report" src="forReadme/Allure_Report_icon.svg">
-<img width="5%" title="Appium" src="forReadme/appium_icon.svg">
+<img width="5%" title="Appium" src="forReadme/appium_icon.png">
 </code>
 </p>
 
