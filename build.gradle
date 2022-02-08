@@ -45,7 +45,9 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform()
+    useJUnitPlatform{
+        includeTags System.getProperty("tag", "browserstack")
+    }
 
     testLogging {
         lifecycle {
@@ -55,3 +57,24 @@ tasks.withType(Test) {
         }
     }
 }
+/*
+task local_android(type: Test) {  // Запускать только с @Tag("properties")
+    systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags "local_android"
+    }
+}
+
+task browserstack(type: Test) {  // Запускать только с @Tag("properties")
+    //systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags "browserstack"
+    }
+}
+
+task Sample(type: Test) {  // Запускать только с @Tag("properties")
+    //systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags "Sample"
+    }
+}*/

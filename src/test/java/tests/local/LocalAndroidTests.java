@@ -1,6 +1,7 @@
 package tests.local;
-;
+
 import io.appium.java_client.MobileBy;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -9,7 +10,10 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class AndroidTests extends TestBase {
+@Tag("local_android")
+public class LocalAndroidTests extends TestBase {
+
+    //gradle clean test -Dtag=local_android
 
     @Test
     void searchWikipediaTest() {
@@ -46,5 +50,37 @@ public class AndroidTests extends TestBase {
                     );
                 }
         );
+    }
+
+
+    @Test
+    void CheckWikipediaPagesTest() {
+        step("Click Skip", () ->
+                back()
+        );
+        step("Check pages", () -> {
+                    step("Search page check", () -> {
+                        $(MobileBy.AccessibilityId("Найти")).click();
+                        $(MobileBy.id("org.wikipedia.alpha:id/history_title"))
+                                .shouldBe(text("История"));
+                        System.out.println("Search page checked");
+                    });
+                    step("Saved page check", () -> {
+                        $(MobileBy.AccessibilityId("Сохранено")).click();
+                        $(MobileBy.id("org.wikipedia.alpha:id/messageTitleView"))
+                                .shouldBe(text("Синхронизировать список для чтения"));
+                        System.out.println("Saved page checked");
+                    });
+                    step("Editing page check", () -> {
+                                $(MobileBy.AccessibilityId("Правки")).click();
+                                $(MobileBy.id("org.wikipedia.alpha:id/messageTitleView"))
+                                        .shouldBe(text("Знаете ли вы," +
+                                                " что каждый может редактировать Википедию?"));
+                                System.out.println("Editing page checked");
+                            }
+                    );
+                }
+        );
+
     }
 }
